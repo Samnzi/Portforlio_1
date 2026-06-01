@@ -79,6 +79,455 @@ nav.scrolled{background:rgba(26,26,26,.94);backdrop-filter:blur(14px);border-bot
 .exp-company{font-family:var(--font-display);font-size:1.6rem;font-weight:400;color:var(--warm-white);margin-bottom:8px}
 .exp-role{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
 .exp-list{list-style:none}
+.exp-list li{font-size:.82rem;line-height:1.7;color:rgba(232,224,212,.65);padding-left:16px;position:relative;margin: bottom 16px;}
+.exp-list li::before{content:"—";position:absolute;left:0;color:var(--accent);font-size:.7rem}
+#education{background:var(--cream);color:var(--charcoal);padding:120px 60px}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:80px;max-width:900px}
+.edu-card{border:1px solid rgba(26,26,26,.12);padding:48px 40px;transition:border-color .3s}
+.edu-card:hover{border-color:var(--accent)}
+.edu-year{font-family:var(--font-display);font-size:3rem;font-weight:300;color:rgba(26,26,26,.12);line-height:1;margin-bottom:24px}
+.edu-institution{font-family:var(--font-display);font-size:1.4rem;font-weight:400;color:var(--charcoal);margin-bottom:8px}
+.edu-degree{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.edu-detail{font-size:.82rem;color:#666;line-height:1.6}
+#projects{background:var(--charcoal);padding:120px 60px}
+.projects-intro{max-width:600px;margin-bottom:80px}
+.projects-intro p{font-size:.9rem;line-height:1.8;color:rgba(232,224,212,.5);margin-top:20px}
+.grid2{display:grid;grid-template-columns:1fr 1fr}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr}
+.gap2{gap:2px;background:rgba(255,255,255,.04)}
+.mb2{margin-bottom:2px}
+.project-card{background:var(--mid-grey);padding:56px 48px;display:flex;flex-direction:column;gap:20px;position:relative;overflow:hidden;transition:background .3s}
+.project-card:hover{background:#282828}
+.project-num{font-family:var(--font-display);font-size:5rem;font-weight:300;color:rgba(196,168,130,.1);line-height:1;position:absolute;top:24px;right:32px}
+.project-tag{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(196,168,130,.3);display:inline-block;padding:5px 14px;border-radius:2px;width:fit-content}
+.project-title{font-family:var(--font-display);font-size:1.8rem;font-weight:400;color:var(--warm-white);line-height:1.2}
+.project-desc{font-size:.82rem;line-height:1.8;color:rgba(232,224,212,.58)}
+.project-metrics{display:flex;gap:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.06);flex-wrap:wrap}
+.metric{display:flex;flex-direction:column;gap:4px}
+.metric-val{font-family:var(--font-display);font-size:1.5rem;font-weight:300;color:var(--accent);line-height:1}
+.metric-label{font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--light-grey)}
+.project-video{width:100%;border-radius:2px;background:#000;display:block;max-height:300px;object-fit:cover;margin-top:8px}
+.project-link{display:inline-flex;align-items:center;gap:10px;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);text-decoration:none;margin-top:4px;transition:gap .3s;cursor:none}
+.project-link:hover{gap:18px}
+.project-link::after{content:"→";font-size:1rem}
+.project-card-creative{background:var(--mid-grey);position:relative;overflow:hidden;display:flex;flex-direction:column;transition:background .3s}
+.project-card-creative:hover{background:#282828}
+.creative-img{width:100%;height:300px;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.project-card-creative:hover .creative-img{transform:scale(1.04)}
+.creative-body{padding:36px 36px 44px;display:flex;flex-direction:column;gap:12px;flex:1}
+.creative-role{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(232,224,212,.38)}
+.project-card-lookbook{background:var(--mid-grey);display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.lookbook-left{padding:64px 56px;display:flex;flex-direction:column;justify-content:center;gap:24px}
+.lookbook-title{font-family:var(--font-display);font-size:2.2rem;font-weight:300;color:var(--warm-white);line-height:1.15}
+.lookbook-title em{font-style:italic;color:var(--accent)}
+.lookbook-right{min-height:420px;background:linear-gradient(135deg,#262626,#1a1a1a);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+.lookbook-placeholder-title{font-family:var(--font-display);font-size:3.5rem;font-weight:300;color:rgba(196,168,130,.25);letter-spacing:.25em}
+.lookbook-placeholder-sub{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(196,168,130,.35)}
+.lookbook-placeholder-sub2{font-size:.58rem;letter-spacing:.15em;color:rgba(255,255,255,.18)}
+.lookbook-btns{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px}
+.btn-outline{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(196,168,130,.4);padding:10px 22px;text-decoration:none;transition:background .3s,color .3s;cursor:none;border-radius:2px}
+.btn-outline:hover{background:var(--accent);color:var(--charcoal)}
+.btn-solid{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body);font-size:.62rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--charcoal);background:var(--accent);border:1px solid var(--accent);padding:10px 22px;cursor:pointer;border-radius:2px;transition:opacity .3s}
+.btn-solid:hover{opacity:.85}
+.pdf-modal{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.9);backdrop-filter:blur(10px);align-items:center;justify-content:center}
+.pdf-modal.open{display:flex}
+.pdf-modal-inner{width:90vw;max-width:1000px;height:85vh;position:relative}
+.pdf-modal-inner iframe{width:100%;height:100%;border:none;border-radius:2px}
+.pdf-close{position:absolute;top:-44px;right:0;background:none;border:none;color:var(--accent);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-family:var(--font-body);cursor:pointer;opacity:.8;padding:4px}
+.pdf-close:hover{opacity:1}
+#contact{background:var(--cream);color:var(--charcoal);padding:120px 60px 80px;position:relative;overflow:hidden}
+#contact::before{content:"TOUCH";position:absolute;bottom:-20px;right:-20px;font-family:var(--font-display);font-size:14rem;font-weight:300;color:rgba(26,26,26,.04);letter-spacing:.05em;line-height:1;pointer-events:none}
+.contact-inner{max-width:700px;position:relative;z-index:2}
+.contact-tagline{font-family:var(--font-display);font-size:clamp(2rem,4vw,4rem);font-weight:300;line-height:1.15;margin-bottom:60px}
+.contact-tagline em{font-style:italic;color:var(--accent)}
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-bottom:60px}
+.contact-item{display:flex;flex-direction:column;gap:6px}
+.contact-item label{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--light-grey)}
+.contact-item a{font-size:.9rem;color:var(--charcoal);text-decoration:none;font-weight:400;transition:color .3s;cursor:none}
+.contact-item a:hover{color:var(--accent)}
+footer{border-top:1px solid rgba(26,26,26,.1);padding-top:40px;display:flex;justify-content:space-between;align-items:center}
+.footer-name{font-family:var(--font-display);font-size:1rem;letter-spacing:.1em;color:rgba(26,26,26,.4)}
+.footer-copy{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(26,26,26,.3)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.12s}
+.reveal-delay-2{transition-delay:.24s}
+.reveal-delay-3{transition-delay:.38s}
+@media(max-width:960px){
+nav{padding:20px 24px}.nav-links{gap:20px}
+#hero{grid-template-columns:1fr}.hero-left{padding:120px 24px 60px}.hero-right{height:65vw}
+#about{grid-template-columns:1fr}.about-img-col{height:70vw}.about-content{padding:60px 24px}.vision-mission{grid-template-columns:1fr}
+.skills-inner{grid-template-columns:1fr;gap:56px}
+#skills,#experience,#projects,#education,#stats,#contact{padding:80px 24px}
+.grid2,.grid3,.stats-grid,.edu-grid,.contact-grid{grid-template-columns:1fr}
+.stats-header{flex-direction:column;align-items:flex-start;gap:16px}
+footer{flex-direction:column;gap:12px;text-align:center}
+.exp-item{grid-template-columns:1fr;gap:6px}.exp-item::before{display:none}.exp-year{padding-left:0}
+.project-card-lookbook{grid-template-columns:1fr}.lookbook-right{min-height:200px}}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav id="mainNav">
+  <a class="nav-logo" href="#hero">Y.S</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li><li><a href="#stats">Stats</a></li><li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li><li><a href="#projects">Work</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Marketing &amp; Creative Portfolio</p>
+    <h1 class="hero-name">YONELA<br>SOMDAKA</h1>
+    <p class="hero-title">Digital Marketer · Content Creator · Creative Director</p>
+    <div class="hero-tags"><span class="tag">Creative</span><span class="tag">Innovative</span><span class="tag">Flexible</span><span class="tag">Cooperative</span></div>
+  </div>
+  <div class="hero-right">
+    <img class="hero-img-main" src="/img/image6 - Copy.jpeg" alt="Yonela Somdaka">
+    <div class="scroll-hint"><span>Scroll</span></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-img-col">
+    <img class="about-img" src="/img/image0.jpeg" alt="Yonela Somdaka">
+    <div class="about-img-caption">BA in Fashion Media</div>
+  </div>
+  <div class="about-content">
+    <p class="section-label reveal">About Me</p>
+    <h2 class="section-title reveal reveal-delay-1">Welcome to My<br><em>Creative Portfolio</em></h2>
+    <p class="about-body reveal reveal-delay-2">A highly motivated and goal-driven person with a formal background in Marketing and Brand Management, gained through working as a brand promoter under Snapped Concepts for 7 months. My academic and experiential background has enabled me to keep pace with the rapidly growing and evolving marketing industry. I possess the confidence to work as part of a team or independently, and I am presently looking for a suitable opportunity to execute and deliver these skills — where I can excel and achieve my potential.</p>
+    <div class="vision-mission reveal reveal-delay-3">
+      <div class="vm-block"><h4>Vision</h4><p>To become a leading voice in the digital marketing space, using creativity, strategy and innovation to build impactful brands that connect deeply with diverse audiences.</p></div>
+      <div class="vm-block"><h4>Mission</h4><p>To continuously learn, adapt and grow within the ever-evolving digital landscape — crafting content that inspires, strategies that convert, and campaigns that leave a lasting impression.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="stats">
+  <div class="stats-header">
+    <div>
+      <p class="section-label reveal">Social Proof</p>
+      <h2 class="section-title-light reveal reveal-delay-1">Instagram<br><em>Statistics</em></h2>
+    </div>
+    <p class="stats-handle reveal">Personal account insights — last 30 days<br><a href="https://www.instagram.com/nella_sommydee" target="_blank">@nella_sommydee</a></p>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-card reveal"><div class="stat-num">1,261</div><div class="stat-label">Followers</div></div>
+    <div class="stat-card reveal reveal-delay-2"><div class="stat-num">725</div><div class="stat-label">Engagement Views</div></div>
+    <div class="stat-card reveal reveal-delay-3"><div class="stat-num">202</div><div class="stat-label">Accounts Reached</div></div>
+  </div>
+  <p class="stats-note reveal">Professional insights from personal account · Data current at time of portfolio creation</p>
+</section>
+
+<section id="skills">
+  <div class="skills-inner">
+    <div>
+      <p class="section-label reveal">Capabilities</p>
+      <h2 class="section-title reveal reveal-delay-1">Personal<br><em>Skills</em></h2>
+      <p class="skills-desc reveal reveal-delay-2">A combination of creative flair and strategic thinking, backed by hands-on experience in social media management, brand promotions, content production and creative direction.</p>
+    </div>
+    <div class="skills-bars reveal reveal-delay-2">
+      <div class="skill-row"><span class="skill-name">Content Creation</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div><span class="skill-pct">85%</span></div>
+      <div class="skill-row"><span class="skill-name">Creative Direction</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%"></div></div><span class="skill-pct">80%</span></div>
+      <div class="skill-row"><span class="skill-name">Critical Thinking</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%"></div></div><span class="skill-pct">80%</span></div>
+      <div class="skill-row"><span class="skill-name">Communication</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:75%"></div></div><span class="skill-pct">75%</span></div>
+      <div class="skill-row"><span class="skill-name">CapCut / Video Editing</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:78%"></div></div><span class="skill-pct">78%</span></div>
+      <div class="skill-row"><span class="skill-name">Analytics &amp; Reporting</span><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:70%"></div></div><span class="skill-pct">70%</span></div>
+    </div>
+  </div>
+</section>
+<section id="experience">
+  <div class="exp-inner">
+    <p class="section-label reveal">Work History</p>
+    <h2 class="section-title-light reveal reveal-delay-1">Work<br><em>Experience</em></h2>
+    <div class="exp-timeline">
+      <div class="exp-item reveal">
+        <div class="exp-year">2026</div>
+        <div>
+          <div class="exp-company">Boston Bakery</div>
+          <div class="exp-role">Content Creator · Gauteng, Johannesburg</div>
+          <ul class="exp-list">
+            <li>Developed a creative social media concept for a bakery branding brief, focused on understated visuals and intentional storytelling across Instagram posts and carousel formats.</li>
+            <li>Produced a three-post content series covering a static product post, a flavour drop carousel, and a behind-the-scenes reel cover.</li>
+            <li>Applied audience-driven content strategy to communicate brand identity through minimal, editorial-style visual direction.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-item reveal reveal-delay-1">
+        <div class="exp-year">2025</div>
+        <div>
+          <div class="exp-company">Thursdays Lingerie</div>
+          <div class="exp-role">Social Media &amp; Marketing Intern</div>
+          <ul class="exp-list">
+            <li>Created, edited and published engaging content for Instagram.</li>
+            <li>Maintained content calendars and drafted press release statements.</li>
+            <li>Assisted with admin tasks and social media scheduling.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-item reveal reveal-delay-2">
+        <div class="exp-year">2022</div>
+        <div>
+          <div class="exp-company">Gaia Earth Projects</div>
+          <div class="exp-role">Marketing Coordinator · Gauteng, Johannesburg</div>
+          <ul class="exp-list">
+            <li>Maintained and monitored project plans and timelines.</li>
+            <li>On-site event coordination and stakeholder support.</li>
+            <li>Social media marketing and content creation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="education">
+  <p class="section-label reveal">Academic Background</p>
+  <h2 class="section-title reveal reveal-delay-1">Education<br><em>Background</em></h2>
+  <div class="edu-grid">
+    <div class="edu-card reveal reveal-delay-2">
+      <div class="edu-year">2020</div>
+      <div class="edu-institution">Collegiate Girls High School</div>
+      <div class="edu-degree">Grade 12 — Bachelor Pass</div>
+      <div class="edu-detail">Matriculated with a Bachelor pass, providing the foundation for tertiary study in creative media.</div>
+    </div>
+    <div class="edu-card reveal reveal-delay-3">
+      <div class="edu-year">2021–2025</div>
+      <div class="edu-institution">Stadio Higher Education</div>
+      <div class="edu-degree">BA in Fashion Media · Fashion Faculty</div>
+      <div class="edu-detail">Comprehensive study in fashion media, brand storytelling, digital marketing strategy and consumer behaviour.</div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="projects-intro">
+    <p class="section-label reveal">Case Studies</p>
+    <h2 class="section-title-light reveal reveal-delay-1">Projects<br><em>Worked On</em></h2>
+    <p class="reveal reveal-delay-2">A mix of social media campaigns with measurable results, academic strategy work, video content and creative direction across fashion and editorial projects.</p>
+  </div>
+  <div class="grid2 gap2 mb2">
+    <div class="project-card reveal">
+      <div class="project-num">01</div>
+      <span class="project-tag">Instagram Reel · Thursdays Lingerie</span>
+      <h3 class="project-title">Body Positivity Event Recap</h3>
+      <p class="project-desc">Created and edited a visually appealing Instagram reel for Thursdays Lingerie, highlighting the brand's body positivity message with strong organic reach.</p>
+      <div class="project-metrics">
+        <div class="metric"><span class="metric-val">959</span><span class="metric-label">Total Views</span></div>
+        <div class="metric"><span class="metric-val">573</span><span class="metric-label">Unique Accounts</span></div>
+        <div class="metric"><span class="metric-val">21</span><span class="metric-label">Interactions</span></div>
+      </div>
+      <a class="project-link" href="https://www.instagram.com/reel/DHaW_MmIowI/?igsh=MWc4djV4NmZvdDNy" target="_blank">View on Instagram</a>
+    </div>
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-num">02</div>
+      <span class="project-tag">Instagram Reel · Thursdays Lingerie</span>
+      <h3 class="project-title">Burn Out Bizarre — Event Visibility</h3>
+      <p class="project-desc">Edited an Instagram reel to drive visibility — 70% of viewers were non-followers, indicating strong discoverability beyond the existing community.</p>
+      <div class="project-metrics">
+        <div class="metric"><span class="metric-val">937</span><span class="metric-label">Total Views</span></div>
+        <div class="metric"><span class="metric-val">675</span><span class="metric-label">Unique Accounts</span></div>
+        <div class="metric"><span class="metric-val">70%</span><span class="metric-label">Non-Followers</span></div>
+      </div>
+      <a class="project-link" href="https://www.instagram.com/reel/DHmHEHno4jZ/?igsh=c3RhcGVnOXA1MXlv" target="_blank">View on Instagram</a>
+    </div>
+  </div>
+  <div class="grid2 gap2 mb2">
+    <div class="project-card reveal">
+      <div class="project-num">03</div>
+      <span class="project-tag">Academic · Fashion Media Strategy</span>
+      <h3 class="project-title">Laude Pulse — Fashion Media Strategy</h3>
+      <p class="project-desc">A strategic fashion media presentation produced as part of my BA studies at Stadio Higher Education, demonstrating research, brand analysis and campaign conceptualisation.</p>
+      <video class="project-video" controls preload="none">
+        <source src="/videos/laude-pulse.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-num">04</div>
+      <span class="project-tag">Content Creation · Social Media</span>
+      <h3 class="project-title">Social Media Video Content</h3>
+      <p class="project-desc">Original video content demonstrating editing style, visual storytelling and content strategy. Showcases proficiency in CapCut editing, pacing and brand-aligned creative production.</p>
+      <video class="project-video" controls preload="none">
+        <source src="/videos/Someu-video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-num">05</div>
+      <span class="project-tag">Content Creation · MOBALIFE</span>
+      <h3 class="project-title">MOBALIFE Internship</h3>
+      <p class="project-desc">Video content produced during the MOBALIFE internship, showcasing creative production and brand-aligned storytelling.</p>
+      <video class="project-video" controls preload="none"><source src="/videos/mobalife-video.mp4" type="video/mp4"></video>
+    </div>
+  </div>
+<div class="grid2 gap2 mb2">
+  <div class="project-card-creative reveal">
+    <img class="creative-img" src="img/levi-campaign.jpg" alt="Levi's Denim Journey">
+    <div class="creative-body">
+      <span class="project-tag">Advertorial · Fashion</span>
+      <h3 class="project-title">Denim Journey</h3>
+      <p class="creative-role">Creative Direction &amp; Styling</p>
+      <p class="project-desc">Conceptualised and styled a denim-focused advertorial shoot for Levi's — "Life cycle of denim, from dirty laundry to fresh, crisp style."</p>
+    </div>
+  </div>
+  <div class="project-card-creative reveal reveal-delay-1">
+   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;height:300px">
+  <div style="position:relative;overflow:hidden">
+    <img style="width:100%;height:300px;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.4,0,.2,1)"
+         onmouseover="this.style.transform='scale(1.04)'"
+         onmouseout="this.style.transform='scale(1)'"
+         src="img/1.png" alt="Boston Bakery Post 01">
+    <span style="position:absolute;bottom:10px;left:10px;font-size:.48rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(0,0,0,.4);padding:4px 8px">01</span>
+  </div>
+  <div style="position:relative;overflow:hidden">
+    <img style="width:100%;height:300px;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.4,0,.2,1)"
+         onmouseover="this.style.transform='scale(1.04)'"
+         onmouseout="this.style.transform='scale(1)'"
+         src="img/2.png" alt="Boston Bakery Post 02">
+    <span style="position:absolute;bottom:10px;left:10px;font-size:.48rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(0,0,0,.4);padding:4px 8px">02</span>
+  </div>
+  <div style="position:relative;overflow:hidden">
+    <img style="width:100%;height:300px;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.4,0,.2,1)"
+         onmouseover="this.style.transform='scale(1.04)'"
+         onmouseout="this.style.transform='scale(1)'"
+         src="img/3.png"alt="Boston Bakery Post 03">
+    <span style="position:absolute;bottom:10px;left:10px;font-size:.48rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(0,0,0,.4);padding:4px 8px">03</span>
+  </div>
+</div>
+<div class="creative-body">
+  <span class="project-tag">Social Media Concept · Bakery Branding</span>
+  <h3 class="project-title">Boston Bakery — Social Concept</h3>
+  <p class="creative-role">Content Strategy &amp; Creative Direction</p>
+  <p class="project-desc">A creative social media concept developed for a bakery branding brief, focused on understated visuals, intentional storytelling and audience-driven content creation across Instagram posts and carousel formats.</p>
+</div>
+</div>
+    </div>
+    <div class="project-card-creative reveal reveal-delay-2">
+      <img class="creative-img" src="/pdf/lookbook.pdf" alt="Lookbook">
+    <div class="creative-body">
+        <span class="project-tag">Editorial · Magazine</span>
+        <h3 class="project-title">Apartment 96' — May 2025</h3>
+        <p class="creative-role">Creative Direction &amp; Styling</p>
+        <p class="project-desc">"Essence of the nostalgic era with the Tapes." A retro-inspired editorial for Apartment 96' magazine — directing set design, wardrobe and creative concept.</p>
+      </div>
+    </div>
+    <div class="project-card-creative reveal reveal-delay-2">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;height:300px;">
+        <img style="width:100%;height:300px;object-fit:cover" src="/img/image1.jpeg" alt="Apartment96 shoot 1">
+        <div style="display:grid;grid-template-rows:1fr 1fr;gap:2px">
+          <img style="width:100%;height:149px;object-fit:cover" src="/img/PHOTO-2025-05-06-14-28-01.jpg" alt="Apartment 96 shoot 2">
+          <img style="width:100%;height:149px;object-fit:cover" src="/img/image5.jpeg" alt="Apartment 96 shoot 3">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gap2">
+    <div class="project-card-lookbook reveal">
+      <div class="lookbook-left">
+        <span class="project-tag">Lookbook · Alumni Collection 2025</span>
+        <h3 class="lookbook-title">Avant-garde<br><em>Expressions</em></h3>
+        <p class="project-desc">A full fashion lookbook produced as part of the Stadio Higher Education Alumni Collection 2025. Showcases editorial photography and visual brand identity.</p>
+        <div class="lookbook-btns">
+          <button class="btn-solid" onclick="document.getElementById('pdfModal').classList.add('open')">View Lookbook ↗</button>
+          <a class="btn-outline" href="/pdf/lookbook.pdf" download>Download PDF ↓</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-inner">
+    <p class="section-label reveal">Get In Touch</p>
+    <h2 class="contact-tagline reveal reveal-delay-1">Let's build something<br><em>great together.</em></h2>
+    <div class="contact-grid reveal reveal-delay-2">
+      <div class="contact-item"><label>Email</label><a href="mailto:yonela.somdaka01@gmail.com">yonela.somdaka01@gmail.com</a></div>
+      <div class="contact-item"><label>Phone</label><a href="tel:+27658888175">065 888 8175</a></div>
+      <div class="contact-item"><label>Instagram</label><a href="https://www.instagram.com/nella_sommydee" target="_blank">@nella_sommydee</a></div>
+      <div class="contact-item"><label>TikTok</label><a href="https://www.tiktok.com/@nella_sommydee" target="_blank">@nella_sommydee</a></div>
+    </div>
+    <footer class="reveal reveal-delay-3">
+      <span class="footer-name">Yonela Somdaka</span>
+      <span class="footer-copy">© 2025 — Marketing &amp; Creative Portfolio</span>
+      <span class="footer-copy">Designed &amp; Built by Sam Nzi</span>
+    </footer>
+  </div>
+</section>
+
+<div class="pdf-modal" id="pdfModal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="pdf-modal-inner">
+    <button class="pdf-close" onclick="document.getElementById('pdfModal').classList.remove('open')">✕ Close</button>
+    <iframe src="/pdf/lookbook.pdf" title="Sculpted in Expressions Lookbook"></iframe>
+  </div>
+</div>
+
+<script>
+const cursor=document.getElementById("cursor"),ring=document.getElementById("cursorRing");
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+"px";cursor.style.top=my+"px";});
+(function a(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+"px";ring.style.top=ry+"px";requestAnimationFrame(a);})();
+document.querySelectorAll("a,button").forEach(el=>{
+  el.addEventListener("mouseenter",()=>{ring.style.width="56px";ring.style.height="56px";ring.style.borderColor="rgba(196,168,130,.8)";});
+  el.addEventListener("mouseleave",()=>{ring.style.width="36px";ring.style.height="36px";ring.style.borderColor="rgba(196,168,130,.5)";});
+});
+const nav=document.getElementById("mainNav");
+window.addEventListener("scroll",()=>nav.classList.toggle("scrolled",window.scrollY>60));
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("visible");}),{threshold:.1});
+document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
+const barObs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.querySelectorAll(".skill-bar-fill").forEach((b,i)=>setTimeout(()=>b.classList.add("animate"),i*110));}),{threshold:.3});
+const sk=document.getElementById("skills");if(sk)barObs.observe(sk);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.getElementById("pdfModal").classList.remove("open");});
+</script>
+</body>
+</html>.about-img-caption{position:absolute;bottom:40px;right:-1px;background:var(--charcoal);color:var(--cream);padding:16px 24px;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase}
+.about-content{padding:100px 80px;display:flex;flex-direction:column;justify-content:center}
+.section-label{font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:14px}
+.section-label::before{content:"";display:block;width:30px;height:1px;background:var(--accent)}
+.section-title{font-family:var(--font-display);font-size:clamp(2.4rem,4vw,4.2rem);font-weight:400;line-height:1.1;color:var(--charcoal);margin-bottom:32px}
+.section-title em{font-style:italic;color:var(--accent)}
+.section-title-light{font-family:var(--font-display);font-size:clamp(2.4rem,4vw,4.2rem);font-weight:300;line-height:1.1;color:var(--warm-white);margin-bottom:32px}
+.section-title-light em{font-style:italic;color:var(--accent)}
+.about-body{font-size:.92rem;line-height:1.9;color:#444;max-width:480px;margin-bottom:48px}
+.vision-mission{display:grid;grid-template-columns:1fr 1fr;gap:32px;border-top:1px solid rgba(26,26,26,.1);padding-top:40px}
+.vm-block h4{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.vm-block p{font-size:.82rem;line-height:1.7;color:#555}
+#stats{background:var(--charcoal);padding:100px 60px;position:relative;overflow:hidden}
+#stats::before{content:"INSTAGRAM";position:absolute;top:40px;right:-20px;font-family:var(--font-display);font-size:8rem;font-weight:300;color:rgba(255,255,255,.03);letter-spacing:.1em;white-space:nowrap;pointer-events:none}
+.stats-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:80px}
+.stats-handle{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--light-grey)}
+.stats-handle a{color:var(--accent);text-decoration:none}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.05)}
+.stat-card{background:var(--dark-grey);padding:60px 48px;position:relative;overflow:hidden;transition:background .3s}
+.stat-card:hover{background:var(--mid-grey)}
+.stat-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transition:transform .4s;transform-origin:left}
+.stat-card:hover::after{transform:scaleX(1)}
+.stat-num{font-family:var(--font-display);font-size:5rem;font-weight:300;line-height:1;color:var(--warm-white);margin-bottom:12px}
+.stat-label{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--light-grey)}
+.stats-note{margin-top:40px;font-size:.7rem;letter-spacing:.08em;color:rgba(255,255,255,.2);text-align:right}
+#skills{background:var(--warm-white);color:var(--charcoal);padding:120px 60px}
+.skills-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
+.skills-desc{font-size:.9rem;line-height:1.8;color:#555;margin-top:20px}
+.skills-bars{margin-top:20px}
+.skill-row{display:flex;align-items:center;gap:24px;margin-bottom:28px}
+.skill-name{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--charcoal);min-width:170px}
+.skill-bar-bg{flex:1;height:2px;background:rgba(26,26,26,.12);position:relative}
+.skill-bar-fill{position:absolute;top:0;left:0;height:100%;background:var(--charcoal);transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.4,0,.2,1)}
+.skill-bar-fill.animate{transform:scaleX(1)}
+.skill-pct{font-size:.65rem;letter-spacing:.1em;color:var(--light-grey);min-width:36px;text-align:right}
+#experience{background:var(--charcoal);padding:120px 60px}
+.exp-inner{max-width:900px;margin:0 auto}
+.exp-timeline{margin-top:80px;position:relative}
+.exp-timeline::before{content:"";position:absolute;left:0;top:12px;bottom:12px;width:1px;background:rgba(196,168,130,.2)}
+.exp-item{display:grid;grid-template-columns:140px 1fr;gap:60px;padding:0 0 72px;position:relative}
+.exp-item::before{content:"";position:absolute;left:-4px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--charcoal)}
+.exp-year{font-size:.65rem;letter-spacing:.15em;color:var(--accent);padding-left:24px;padding-top:4px}
+.exp-company{font-family:var(--font-display);font-size:1.6rem;font-weight:400;color:var(--warm-white);margin-bottom:8px}
+.exp-role{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
+.exp-list{list-style:none}
 .exp-list li{font-size:.82rem;line-height:1.7;color:rgba(232,224,212,.65);padding-left:16px;position:relative;margin-bottom:16px}
 .exp-list li::before{content:"—";position:absolute;left:0;color:var(--accent);font-size:.7rem}
 #education{background:var(--cream);color:var(--charcoal);padding:120px 60px}
