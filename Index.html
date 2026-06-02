@@ -79,16 +79,16 @@ nav.scrolled{background:rgba(26,26,26,.94);backdrop-filter:blur(14px);border-bot
 .exp-company{font-family:var(--font-display);font-size:1.6rem;font-weight:400;color:var(--warm-white);margin-bottom:8px}
 .exp-role{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
 .exp-list{list-style:none}
-.exp-list li{font-size:.82rem;line-height:1.7;color:rgba(232,224,212,.65);padding-left:16px;position:relative;margin-bottom:16px}
+.exp-list li{font-size:.82rem;line-height:1.7;color:rgba(232,224,212,.65);padding-left:16px;position:relative;margin: bottom 16px;}
 .exp-list li::before{content:"—";position:absolute;left:0;color:var(--accent);font-size:.7rem}
 #education{background:var(--cream);color:var(--charcoal);padding:120px 60px}
 .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:80px;max-width:900px}
 .edu-card{border:1px solid rgba(26,26,26,.12);padding:48px 40px;transition:border-color .3s}
 .edu-card:hover{border-color:var(--accent)}
-.edu-year{font-family:var(--font-display);font-size:3rem;font-weight:300;color:rgba(26,26,26,.12);line-height:1;margin-bottom:24px}
+.edu-year{font-family:var(--font-display);font-size:3rem;font-weight:300;color:rgba(0, 0, 0, 0.12);line-height:1;margin-bottom:24px}
 .edu-institution{font-family:var(--font-display);font-size:1.4rem;font-weight:400;color:var(--charcoal);margin-bottom:8px}
 .edu-degree{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
-.edu-detail{font-size:.82rem;color:#666;line-height:1.6}
+.edu-detail{font-size:.82rem;color:#181818;line-height:1.6}
 #projects{background:var(--charcoal);padding:120px 60px}
 .projects-intro{max-width:600px;margin-bottom:80px}
 .projects-intro p{font-size:.9rem;line-height:1.8;color:rgba(232,224,212,.5);margin-top:20px}
@@ -157,43 +157,16 @@ footer{border-top:1px solid rgba(26,26,26,.1);padding-top:40px;display:flex;just
 .reveal-delay-2{transition-delay:.24s}
 .reveal-delay-3{transition-delay:.38s}
 @media(max-width:960px){
-nav{padding:16px 20px}
-.nav-links{gap:14px}
-.nav-links a{font-size:.58rem;letter-spacing:.12em}
-
-#hero{grid-template-columns:1fr;grid-template-rows:auto auto;min-height:100vh}
-.hero-right{order:1;height:60vw;min-height:260px}
-.hero-img-main{width:100%;height:100%;object-fit:cover;object-position:top center}
-.hero-left{order:2;padding:40px 24px 60px;justify-content:flex-start}
-.hero-name{font-size:clamp(3.5rem,14vw,6rem)}
-.hero-title{margin-top:20px;margin-bottom:32px}
-.scroll-hint{display:none}
-
-#about{grid-template-columns:1fr}
-.about-img-col{height:70vw}
-.about-content{padding:60px 24px}
-.vision-mission{grid-template-columns:1fr}
-
+nav{padding:20px 24px}.nav-links{gap:20px}
+#hero{grid-template-columns:1fr}.hero-left{padding:120px 24px 60px}.hero-right{height:65vw}
+#about{grid-template-columns:1fr}.about-img-col{height:70vw}.about-content{padding:60px 24px}.vision-mission{grid-template-columns:1fr}
 .skills-inner{grid-template-columns:1fr;gap:56px}
-.skill-name{min-width:130px;font-size:.62rem}
-
 #skills,#experience,#projects,#education,#stats,#contact{padding:80px 24px}
-
 .grid2,.grid3,.stats-grid,.edu-grid,.contact-grid{grid-template-columns:1fr}
 .stats-header{flex-direction:column;align-items:flex-start;gap:16px}
-
 footer{flex-direction:column;gap:12px;text-align:center}
-
-.exp-item{grid-template-columns:1fr;gap:6px}
-.exp-item::before{display:none}
-.exp-year{padding-left:0}
-
-.project-card-lookbook{grid-template-columns:1fr}
-.lookbook-right{min-height:200px}
-.lookbook-left{padding:40px 24px}
-
-.project-card{padding:36px 24px}
-.project-card-creative .creative-body{padding:24px 24px 32px}}
+.exp-item{grid-template-columns:1fr;gap:6px}.exp-item::before{display:none}.exp-year{padding-left:0}
+.project-card-lookbook{grid-template-columns:1fr}.lookbook-right{min-height:200px}}
 </style>
 </head>
 <body>
@@ -215,14 +188,14 @@ footer{flex-direction:column;gap:12px;text-align:center}
     <div class="hero-tags"><span class="tag">Creative</span><span class="tag">Innovative</span><span class="tag">Flexible</span><span class="tag">Cooperative</span></div>
   </div>
   <div class="hero-right">
-    <img class="hero-img-main" src="img/Yonela_1.jpeg" alt="Yonela Somdaka">
+    <img class="hero-img-main" src="/img/image6 - Copy.jpeg" alt="Yonela Somdaka">
     <div class="scroll-hint"><span>Scroll</span></div>
   </div>
 </section>
 
 <section id="about">
   <div class="about-img-col">
-    <img class="about-img" src="img/image0.jpeg" alt="Yonela Somdaka portrait">
+    <img class="about-img" src="/img/image0.jpeg" alt="Yonela Somdaka">
     <div class="about-img-caption">BA in Fashion Media</div>
   </div>
   <div class="about-content">
@@ -269,13 +242,24 @@ footer{flex-direction:column;gap:12px;text-align:center}
     </div>
   </div>
 </section>
-
 <section id="experience">
   <div class="exp-inner">
     <p class="section-label reveal">Work History</p>
     <h2 class="section-title-light reveal reveal-delay-1">Work<br><em>Experience</em></h2>
     <div class="exp-timeline">
       <div class="exp-item reveal">
+        <div class="exp-year">2026</div>
+        <div>
+          <div class="exp-company">Boston Bakery</div>
+          <div class="exp-role">Content Creator · Gauteng, Johannesburg</div>
+          <ul class="exp-list">
+            <li>Developed a creative social media concept for a bakery branding brief, focused on understated visuals and intentional storytelling across Instagram posts and carousel formats.</li>
+            <li>Produced a three-post content series covering a static product post, a flavour drop carousel, and a behind-the-scenes reel cover.</li>
+            <li>Applied audience-driven content strategy to communicate brand identity through minimal, editorial-style visual direction.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-item reveal reveal-delay-1">
         <div class="exp-year">2025</div>
         <div>
           <div class="exp-company">Thursdays Lingerie</div>
@@ -288,17 +272,17 @@ footer{flex-direction:column;gap:12px;text-align:center}
         </div>
       </div>
       <div class="exp-item reveal reveal-delay-1">
-        <div class="exp-year">2023</div>
-        <div>
-          <div class="exp-company">Snapped Concepts</div>
-          <div class="exp-role">Brand Promoter · Gauteng, Johannesburg</div>
-          <ul class="exp-list">
-            <li>Demonstrated and provided information on promoted products and services.</li>
-            <li>Created a positive brand image and led consumer engagement.</li>
-            <li>Distributed product samples, brochures and prizes to source new sales opportunities.</li>
-          </ul>
-        </div>
-      </div>
+  <div class="exp-year">2023</div>
+  <div>
+    <div class="exp-company">Snapped Concepts</div>
+    <div class="exp-role">Brand Promoter · Gauteng, Johannesburg</div>
+    <ul class="exp-list">
+      <li>Demonstrated and provided information on promoted products and services.</li>
+      <li>Created a positive brand image and led consumer engagement.</li>
+      <li>Distributed product samples, brochures and prizes to source new sales opportunities.</li>
+    </ul>
+  </div>
+</div>
       <div class="exp-item reveal reveal-delay-2">
         <div class="exp-year">2022</div>
         <div>
@@ -314,7 +298,6 @@ footer{flex-direction:column;gap:12px;text-align:center}
     </div>
   </div>
 </section>
-
 <section id="education">
   <p class="section-label reveal">Academic Background</p>
   <h2 class="section-title reveal reveal-delay-1">Education<br><em>Background</em></h2>
@@ -340,8 +323,6 @@ footer{flex-direction:column;gap:12px;text-align:center}
     <h2 class="section-title-light reveal reveal-delay-1">Projects<br><em>Worked On</em></h2>
     <p class="reveal reveal-delay-2">A mix of social media campaigns with measurable results, academic strategy work, video content and creative direction across fashion and editorial projects.</p>
   </div>
-
-  <!-- Row 1: Instagram Reels -->
   <div class="grid2 gap2 mb2">
     <div class="project-card reveal">
       <div class="project-num">01</div>
@@ -368,76 +349,90 @@ footer{flex-direction:column;gap:12px;text-align:center}
       <a class="project-link" href="https://www.instagram.com/reel/DHmHEHno4jZ/?igsh=c3RhcGVnOXA1MXlv" target="_blank">View on Instagram</a>
     </div>
   </div>
-
-  <!-- Row 2: Videos -->
-  <div class="grid3 gap2 mb2">
+  <div class="grid2 gap2 mb2">
     <div class="project-card reveal">
       <div class="project-num">03</div>
       <span class="project-tag">Academic · Fashion Media Strategy</span>
-      <h3 class="project-title">Laude Pulse</h3>
-      <p class="project-desc">A strategic fashion media presentation produced as part of my BA studies at Stadio Higher Education.</p>
+      <h3 class="project-title">Laude Pulse — Fashion Media Strategy</h3>
+      <p class="project-desc">A strategic fashion media presentation produced as part of my BA studies at Stadio Higher Education, demonstrating research, brand analysis and campaign conceptualisation.</p>
       <video class="project-video" controls preload="none">
-        <source src="videos/laude-pulse.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="project-card reveal reveal-delay-1">
-      <div class="project-num">04</div>
-      <span class="project-tag">Content Creation · Social Media</span>
-      <h3 class="project-title">Social Media Video Content</h3>
-      <p class="project-desc">Original video content demonstrating editing style, visual storytelling and content strategy using CapCut.</p>
-      <video class="project-video" controls preload="none">
-        <source src="videos/Someu-video.mp4" type="video/mp4">
+        <source src="/videos/laude-pulse.mp4" type="video/mp4">
       </video>
     </div>
     <div class="project-card reveal reveal-delay-2">
-      <div class="project-num">05</div>
-      <span class="project-tag">Freelance · Graphic Design</span>
-      <h3 class="project-title">MOBALIFE — Creative Application</h3>
-      <p class="project-desc">Graphics produced for MOBALIFE as part of their application process, showcasing creative direction, visual design and brand-aligned storytelling.</p>
+      <div class="project-num">04</div>
+      <span class="project-tag">Content Creation · Social Media</span>
+      <h3 class="project-title">Social Media Video Content</h3>
+      <p class="project-desc">Original video content demonstrating editing style, visual storytelling and content strategy. Showcases proficiency in CapCut editing, pacing and brand-aligned creative production.</p>
       <video class="project-video" controls preload="none">
-        <source src="videos/mobalife-video.mp4" type="video/mp4">
+        <source src="/videos/Someu-video.mp4" type="video/mp4">
       </video>
     </div>
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-num">05</div>
+      <span class="project-tag">Content Creation · MOBALIFE</span>
+      <h3 class="project-title">MOBALIFE Internship</h3>
+      <p class="project-desc">Video content produced during the MOBALIFE internship, showcasing creative production and brand-aligned storytelling.</p>
+      <video class="project-video" controls preload="none"><source src="/videos/mobalife-video.mp4" type="video/mp4"></video>
+    </div>
   </div>
-
-  <!-- Row 3: Creative / Editorial -->
-  <div class="grid3 gap2 mb2">
-    <div class="project-card-creative reveal">
-      <img class="creative-img" src="img/levi-campaign.jpg" alt="Levi's Denim Journey">
-      <div class="creative-body">
-        <span class="project-tag">Advertorial · Fashion</span>
-        <h3 class="project-title">Denim Journey</h3>
-        <p class="creative-role">Creative Direction &amp; Styling</p>
-        <p class="project-desc">Conceptualised and styled a denim-focused advertorial shoot for Levi's — "Life cycle of denim, from dirty laundry to fresh, crisp style."</p>
-      </div>
+<div class="grid2 gap2 mb2">
+  <div class="project-card-creative reveal">
+    <img class="creative-img" src="img/levi-campaign.jpg" alt="Levi's Denim Journey">
+    <div class="creative-body">
+      <span class="project-tag">Advertorial · Fashion</span>
+      <h3 class="project-title">Denim Journey</h3>
+      <p class="creative-role">Creative Direction &amp; Styling</p>
+      <p class="project-desc">Conceptualised and styled a denim-focused advertorial shoot for Levi's — "Life cycle of denim, from dirty laundry to fresh, crisp style."</p>
+    </div>
+  </div>
+  <div class="project-card-creative reveal reveal-delay-1">
+   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;height:300px">
+  <div style="position:relative;overflow:hidden">
+    <img style="width:100%;height:300px;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.4,0,.2,1);transform-origin:center;cursor:zoom-in"
+         onmouseover="this.style.transform='scale(1.15)'"
+         onmouseout="this.style.transform='scale(1)'"
+         src="img/1.png" alt="Boston Bakery Post 01">
+    <span style="position:absolute;bottom:10px;left:10px;font-size:.48rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(0,0,0,.4);padding:4px 8px">01</span>
+  </div>
+  <div style="position:relative;overflow:hidden">
+    <img style="width:100%;height:300px;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.4,0,.2,1);transform-origin:center;cursor:zoom-in"
+         onmouseover="this.style.transform='scale(1.15)'"
+         onmouseout="this.style.transform='scale(1)'"
+         src="img/2.png" alt="Boston Bakery Post 02">
+    <span style="position:absolute;bottom:10px;left:10px;font-size:.48rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(0,0,0,.4);padding:4px 8px">02</span>
+  </div>
+  <div style="position:relative;overflow:hidden">
+    <img style="width:100%;height:300px;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.4,0,.2,1);transform-origin:center;cursor:zoom-in"
+         onmouseover="this.style.transform='scale(1.15)'"
+         onmouseout="this.style.transform='scale(1)'"
+         src="img/3.png"alt="Boston Bakery Post 03">
+    <span style="position:absolute;bottom:10px;left:10px;font-size:.48rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(0,0,0,.4);padding:4px 8px">03</span>
+  </div>
+</div>
+<div class="creative-body">
+  <span class="project-tag">Social Media Concept · Bakery Branding</span>
+  <h3 class="project-title">Boston Bakery — Social Concept</h3>
+  <p class="creative-role">Content Strategy &amp; Creative Direction</p>
+  <p class="project-desc">A creative social media concept developed for a bakery branding brief, focused on understated visuals, intentional storytelling and audience-driven content creation across Instagram posts and carousel formats.</p>
+</div>
+</div>
     </div>
     <div class="project-card-creative reveal reveal-delay-2">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;height:300px">
-        <img style="width:100%;height:300px;object-fit:cover" src="img/image1.jpeg" alt="Apartment 96 shoot 1">
-        <div style="display:grid;grid-template-rows:1fr 1fr;gap:2px">
-          <img style="width:100%;height:149px;object-fit:cover" src="img/PHOTO-2025-05-06-14-28-01.jpg" alt="Apartment 96 shoot 2">
-          <img style="width:100%;height:149px;object-fit:cover" src="img/image5.jpeg" alt="Apartment 96 shoot 3">
-        </div>
-      </div>
-      <div class="creative-body">
-        <span class="project-tag">Editorial · Magazine</span>
-        <h3 class="project-title">Apartment 96' — May 2025</h3>
-        <p class="creative-role">Creative Direction &amp; Styling</p>
-        <p class="project-desc">"Essence of the nostalgic era with the Tapes." A retro-inspired editorial for Apartment 96' magazine — directing set design, wardrobe and creative concept.</p>
-      </div>
-    </div>
-    <div class="project-card-creative reveal reveal-delay-3">
-      <img class="creative-img" src="img/image0.jpeg" alt="Editorial Content">
-      <div class="creative-body">
-        <span class="project-tag">Editorial · Creative</span>
-        <h3 class="project-title">Editorial Content</h3>
-        <p class="creative-role">Creative Direction &amp; Styling</p>
-        <p class="project-desc">Original editorial content demonstrating visual storytelling, styling and creative direction across fashion media contexts.</p>
-      </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;height:300px;">
+    <img style="width:100%;height:300px;object-fit:cover" src="/img/image1.jpeg" alt="Apartment 96 shoot 1">
+    <div style="display:grid;grid-template-rows:1fr 1fr;gap:2px">
+      <img style="width:100%;height:149px;object-fit:cover" src="/img/PHOTO-2025-05-06-14-28-01.jpg" alt="Apartment 96 shoot 2">
+      <img style="width:100%;height:149px;object-fit:cover" src="/img/image5.jpeg" alt="Apartment 96 shoot 3">
     </div>
   </div>
-
-  <!-- Row 4: Lookbook -->
+  <div class="creative-body">
+    <span class="project-tag">Editorial · Magazine</span>
+    <h3 class="project-title">Apartment 96' — May 2025</h3>
+    <p class="creative-role">Creative Direction &amp; Styling</p>
+    <p class="project-desc">"Essence of the nostalgic era with the Tapes." A retro-inspired editorial for Apartment 96' magazine — directing set design, wardrobe and creative concept.</p>
+  </div>
+</div>
   <div class="gap2">
     <div class="project-card-lookbook reveal">
       <div class="lookbook-left">
@@ -446,13 +441,8 @@ footer{flex-direction:column;gap:12px;text-align:center}
         <p class="project-desc">A full fashion lookbook produced as part of the Stadio Higher Education Alumni Collection 2025. Showcases editorial photography and visual brand identity.</p>
         <div class="lookbook-btns">
           <button class="btn-solid" onclick="document.getElementById('pdfModal').classList.add('open')">View Lookbook ↗</button>
-          <a class="btn-outline" href="pdf/lookbook.pdf" download>Download PDF ↓</a>
+          <a class="btn-outline" href="/pdf/lookbook.pdf" download>Download PDF ↓</a>
         </div>
-      </div>
-      <div class="lookbook-right">
-        <span class="lookbook-placeholder-title">AVE</span>
-        <span class="lookbook-placeholder-sub">Avant-garde Expressions</span>
-        <span class="lookbook-placeholder-sub2">Alumni Collection · Stadio 2025</span>
       </div>
     </div>
   </div>
@@ -471,6 +461,7 @@ footer{flex-direction:column;gap:12px;text-align:center}
     <footer class="reveal reveal-delay-3">
       <span class="footer-name">Yonela Somdaka</span>
       <span class="footer-copy">© 2025 — Marketing &amp; Creative Portfolio</span>
+      <span class="footer-copy">Designed &amp; Built by Sam Nzi</span>
     </footer>
   </div>
 </section>
@@ -478,7 +469,7 @@ footer{flex-direction:column;gap:12px;text-align:center}
 <div class="pdf-modal" id="pdfModal" onclick="if(event.target===this)this.classList.remove('open')">
   <div class="pdf-modal-inner">
     <button class="pdf-close" onclick="document.getElementById('pdfModal').classList.remove('open')">✕ Close</button>
-    <iframe src="pdf/lookbook.pdf" title="Avant-garde Expressions Lookbook"></iframe>
+    <iframe src="/pdf/lookbook.pdf" title="Sculpted in Expressions Lookbook"></iframe>
   </div>
 </div>
 
